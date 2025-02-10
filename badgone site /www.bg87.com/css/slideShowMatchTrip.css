@@ -1,0 +1,49 @@
+.menu_element #slideShowMatchTrip {
+  margin:0 auto;
+  overflow:auto; /* affiche une scrollbar au cas ou */
+}
+
+.menu_element #slideShowMatchTrip .slideMatchTrip {
+  margin:0 auto;
+  height:210px;
+}
+
+.controlMatchTrip {
+  display:block;
+  width:32px;
+  height:32px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+
+#navDiapoMatchTrip{
+	display:block;
+	width:32px;
+	height:32px;
+	position:absolute;
+	right:55px;
+	bottom:10px;
+	cursor:pointer;
+
+}
+
+#leftControlMatchTrip {
+	left:5px;
+	top:220px;
+	background:transparent url("../images/slideShow/control_left.png") no-repeat 0 0;
+}
+
+#rightControlMatchTrip {
+	right:5px;
+	top:220px;
+	background:transparent url("../images/slideShow/control_right.png") no-repeat 0 0;
+}
+
+#leftControlMatchTrip:hover {
+	background:transparent url("../images/slideShow/control_left_hover.png") no-repeat 0 0;
+}
+
+#rightControlMatchTrip:hover {
+	background:transparent url("../images/slideShow/control_right_hover.png") no-repeat 0 0;
+}
