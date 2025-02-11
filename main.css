@@ -7,6 +7,11 @@ body{
     overscroll-behavior: none;
 }
 
+h1{
+    text-align: center;
+    font-size: 70px;
+}
+
 
 .boutons_pages{
     display: flex;
@@ -16,15 +21,15 @@ body{
 }
 a{
     text-decoration: none;
-    color: #fdca4e;
+    color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
 
 .offre{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -34,16 +39,16 @@ a{
 
 .offre:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 
 .doc{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -53,15 +58,15 @@ a{
 
 .doc:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 .a_propos{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -70,15 +75,15 @@ a{
 }
 .a_propos:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 .contact{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -88,16 +93,16 @@ a{
 
 .contact:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 
 .connexion{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -107,16 +112,16 @@ a{
 
 .connexion:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 
 .débuter{
     border: 2px;
-    border-color: #383636;
-    background-color: #383636;
+    border-color: #1112AA;
+    background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
     width: 10rem;
@@ -126,9 +131,9 @@ a{
 
 .débuter:hover{
     transition: color 200ms;
-    color:#fdca4e;
-    background-color:#676767;
-    border-color: #676767;
+    color:#ffffff;
+    background-color:#1616d2;
+    border-color: #1616d2;
     
 }
 
@@ -294,25 +299,64 @@ footer svg{
 }
 
 
-.last_match{
-    display:flex;
-    border: 2px;
-    border-color: #383636;
-    background-color: #383636;
-    border-style: solid;
+.last_match {
+    display: flex;
+    flex-direction: column;  /* Aligne les éléments verticalement */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #383636;
     border-radius: 10px;
-    padding-bottom: 100px;
-    width: 10rem;
-    padding-right: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-
+    background-color: #f8f8f8;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-img{
-    height: 30px;
+.championship_day {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;  /* Espacement entre le titre et les logos */
 }
+
+.last_match img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.winner {
+    color: green;
+    font-weight: bold;
+}
+
+.looser {
+    color: red;
+    font-weight: bold;
+}
+
+/* Ajouter un conteneur pour les logos et le score pour les espacer correctement */
+.last_match .score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
 
 .fond{
     display: flex;
@@ -327,16 +371,48 @@ img{
 
 
 
-.devise {
+.edvise {
     display: flex;
     color: #ffffff;
     justify-content: center;  
     align-items: center;  
     height: 100vh;
-    font-size: 70px;
+    font-size: clamp(20px, 5vw, 50px);;
     border: 2px solid ;
-    background: linear-gradient(to bottom, #0400ee 50%, #ff1111 50%); /* Gris en haut, jaune en bas */
+    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%); /* Gris en haut, jaune en bas */
     margin: 350px 350px 500px 350px;
     border-radius: 30px;
     text-align: center;
 }
+
+.devise {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100px; /* Hauteur minimale */
+    min-width: 300px; /* Largeur minimale */
+    font-size: clamp(20px, 5vw, 50px);;
+    border: 2px solid ;
+    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%); /* Gris en haut, jaune en bas */
+    margin: 350px 350px 500px 350px; /* h d - g */
+    border-radius: 30px;
+    text-align: center;
+}
+
+.deise {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100px; /* Hauteur minimale */
+    min-width: 300px; /* Largeur minimale */
+    font-size: clamp(20px, 5vw, 50px);
+    border: 2px solid;
+    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%);
+    max-width: 90%; /* Pour éviter de dépasser l'écran */
+    padding: 20px; /* Espace autour du texte */
+    border-radius: 30px;
+    text-align: center;
+}
+
