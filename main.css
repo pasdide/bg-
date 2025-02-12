@@ -19,6 +19,24 @@ h2 {
 }
 
 
+.devise-container {
+    position: absolute; 
+    top: 45%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%; 
+    text-align: center; 
+}
+
+.devise {
+    display: inline-block;
+    color: white;
+    padding: 20px 40px;
+    font-size: clamp(20px, 5vw, 50px);
+    border: 2px solid;
+    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%);
+    border-radius: 30px;
+}
 
 
 @media (max-width: 768px) { 
@@ -38,7 +56,7 @@ h2 {
     position: fixed;
     top: 0;
     transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding: 30px 0;
+    padding: 55px 0;
 }
 
 .boutons_pages.scrolled {
@@ -53,9 +71,9 @@ a{
     font-size: 20px;
 }
 
-.offre{
-    border: 2px;
-    border-color: #1112AA;
+.accueil{
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -64,17 +82,17 @@ a{
     text-align: center;
 }
 
-.offre:hover{
+.accueil:hover{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
 
-.doc{
-    border: 2px;
-    border-color: #1112AA;
+.historique{
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -83,16 +101,16 @@ a{
     text-align: center;
 }
 
-.doc:hover{
+.historique:hover{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
-.a_propos{
-    border: 2px;
-    border-color: #1112AA;
+.calendrier{
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -100,16 +118,16 @@ a{
     padding: 4px;
     text-align: center;
 }
-.a_propos:hover{
+.calendrier:hover{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
 .contact{
-    border: 2px;
-    border-color: #1112AA;
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -122,13 +140,13 @@ a{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
 
-.connexion{
-    border: 2px;
-    border-color: #1112AA;
+.forums{
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -137,17 +155,17 @@ a{
     text-align: center;
 }
 
-.connexion:hover{
+.forums:hover{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
 
-.débuter{
-    border: 2px;
-    border-color: #1112AA;
+.login{
+    border: 1px;
+    border-color: #ffffff;
     background-color: #1112AA;
     border-style: solid;
     border-radius: 10px;
@@ -156,11 +174,11 @@ a{
     text-align: center;
 }
 
-.débuter:hover{
+.login:hover{
     transition: color 200ms;
     color:#ffffff;
     background-color:#1616d2;
-    border-color: #1616d2;
+    border-color: #ffffff;
     
 }
 
@@ -399,26 +417,14 @@ footer svg{
     background-position: center; 
     background-repeat: no-repeat; 
     height: 100vh;
+    filter: blur(3px);
 }
 
 
 
 
 
-.devise {
-    display: flex;
-    color: white;
-    justify-content: center;  
-    align-items: center;  
-    min-height: 100px; 
-    min-width: 300px; 
-    font-size: clamp(20px, 5vw, 50px);;
-    border: 2px solid ;
-    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%); 
-    margin: 350px 350px 500px 350px; /* h d b g */
-    border-radius: 30px;
-    text-align: center;
-}
+
 
 
 
