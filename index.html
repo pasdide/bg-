@@ -8,42 +8,81 @@
     <title>BG 87</title>
 </head>
 <body>
+    
     <div class="fond"> 
         <div>&nbsp;</div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
-        <div class="boutons_pages">
-            <!-- <img src="./images - vidéos/logo.png" alt="logo">  -->
-            <a href="" class="offre">Accueil</a>
-            <a href="" class="doc">Historique</a>
-            <a href="" class="a_propos">Calendrier</a>
-            <a href="" class="contact">Contact</a>  
-            <a href="" class="connexion">Forums</a>  
-            <a href="" class="débuter">Login</a>
-        </div>
         <div class="contour-devise"></div>
         <div class="devise">COMBATTRE ET VAINCRE</div>
     </div>
+    <div class="boutons_pages">
+        <!-- <img src="./images - vidéos/logo.png" alt="logo">  -->
+        <a href="" class="offre">Accueil</a>
+        <a href="" class="doc">Historique</a>
+        <a href="" class="a_propos">Calendrier</a>
+        <a href="" class="contact">Contact</a>  
+        <a href="" class="connexion">Forums</a>  
+        <a href="" class="débuter">Login</a>
+    </div>
     <div>&nbsp;</div>
 
-    <h1>Dernier match :</h1>
+    <div class="match_total">
 
-    <div class="last_match">
-        <h4 class="championship_day">Ligue 1 - J21</h4>
-        <div class="score-container">
-            <img src="image/1609.png" alt="Olympique Lyonnais" title="Olympique Lyonnais"/>
-            <p class="score">
-                <span class="winner">4</span> - <span class="looser">0</span>
-            </p>
-            <img src="image/1623.png" title="Stade de Reims" alt="Stade de Reims"/>
+        <h1>Dernier match :</h1>
+
+        <div class="last_match">
+            <h4 class="championship_day">Ligue 1 - J21</h4>
+            <div class="score-container">
+                <img src="image/1609.png" alt="Olympique Lyonnais" title="Olympique Lyonnais"/>
+                <p class="score">
+                    <span class="winner">4</span> - <span class="looser">0</span>
+                </p>
+                <img src="image/1623.png" title="Stade de Reims" alt="Stade de Reims"/>
+            </div>
+            <p class="report"></p>
         </div>
-        <p class="report"></p>
     </div>
+
+    <div class="w3-content w3-display-container" style="max-width:800px; position:relative;">
+
+        <!-- Cartes du slider -->
+        <div class="mySlides w3-animate-right">
+            <div class="card">
+                <h2>🌟 Carte 1</h2>
+                <p>Description de la première carte.</p>
+                <button class="w3-button w3-green">Voir plus</button>
+            </div>
+        </div>
     
+        <div class="mySlides w3-animate-right">
+            <div class="card">
+                <h2>🔥 Carte 2</h2>
+                <p>Une autre carte avec des informations.</p>
+                <button class="w3-button w3-green">Voir plus</button>
+            </div>
+        </div>
+    
+        <div class="mySlides w3-animate-right">
+            <div class="card">
+                <h2>🚀 Carte 3</h2>
+                <p>Dernière carte du slider.</p>
+                <button class="w3-button w3-green">Voir plus</button>
+            </div>
+        </div>
+    
+        <!-- Flèches de navigation -->
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    
+    </div>
 
     <div class="bordereau">&nbsp;</div>
 
     <div class="new"></div>
+
+    <script src="js/scroll.js" defer></script>
+    <script src="js/slide.js" defer></script>
 
 </body>
 </html>

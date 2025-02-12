@@ -8,17 +8,44 @@ body{
 }
 
 h1{
+    font-family:"Segoe UI",Arial,sans-serif;
     text-align: center;
     font-size: 70px;
 }
+h2 {
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    margin:10px 0
+}
 
 
-.boutons_pages{
+
+
+@media (max-width: 768px) { 
+    .boutons_pages {
+        flex-direction: column; 
+        align-items: center; 
+        top: 2%; 
+    }
+}
+
+.boutons_pages {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 30px 0;
 }
+
+.boutons_pages.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+}
+
 a{
     text-decoration: none;
     color: #ffffff;
@@ -306,13 +333,21 @@ footer svg{
     justify-content: center;
     border: 2px solid #383636;
     border-radius: 10px;
-    background-color: #f8f8f8;
+    background-color: white;
     padding: 20px;
     width: 90%;
     max-width: 500px;
-    margin: 50px auto;
+    margin: 50px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.match_total {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .championship_day {
@@ -350,7 +385,6 @@ footer svg{
 .last_match .score-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
@@ -365,28 +399,15 @@ footer svg{
     background-position: center; 
     background-repeat: no-repeat; 
     height: 100vh;
-
 }
 
 
 
-.edvise {
-    display: flex;
-    color: #ffffff;
-    justify-content: center;  
-    align-items: center;  
-    height: 100vh;
-    font-size: clamp(20px, 5vw, 50px);;
-    border: 2px solid ;
-    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%); 
-    margin: 350px 350px 500px 350px;
-    border-radius: 30px;
-    text-align: center;
-}
+
 
 .devise {
     display: flex;
-    color: #ffffff;
+    color: white;
     justify-content: center;  
     align-items: center;  
     min-height: 100px; 
@@ -394,24 +415,81 @@ footer svg{
     font-size: clamp(20px, 5vw, 50px);;
     border: 2px solid ;
     background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%); 
-    margin: 350px 350px 500px 350px; /* h d - g */
+    margin: 350px 350px 500px 350px; /* h d b g */
     border-radius: 30px;
     text-align: center;
 }
 
-.deise {
-    display: flex;
-    color: #ffffff;
-    justify-content: center;  
-    align-items: center;  
-    min-height: 100px; 
-    min-width: 300px;
-    font-size: clamp(20px, 5vw, 50px);
-    border: 2px solid;
-    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%);
-    max-width: 90%; 
-    padding: 20px; 
-    border-radius: 30px;
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------*/ */
+/* ----------------------------------- MENU DEFILANT ------------------------------------------------------------*/ */
+/* --------------------------------------------------------------------------------------------------------*/
+
+.mySlides {
+    display: none;
+} 
+.card {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     text-align: center;
 }
 
+.w3-animate-right {
+    position:relative;
+    animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}
+}
+
+.w3-content {
+    margin-left:auto;
+    margin-right:auto
+}
+
+.w3-display-container {
+    position:relative 
+}
+
+.w3-button {
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+
+.w3-green {
+    color:#fff!important;
+    background-color:#4CAF50!important 
+}
+
+.w3-black {
+    color:#fff!important;
+    background-color:#000!important 
+}
+
+.w3-display-left {
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%)
+}
+
+.w3-display-right { 
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
+}
