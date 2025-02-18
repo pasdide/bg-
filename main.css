@@ -18,25 +18,71 @@ h2 {
     margin:10px 0
 }
 
+h3 {
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+a{
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+
 
 .devise-container {
-    position: absolute; 
-    top: 45%; 
+    position: absolute;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%); 
-    width: 100%; 
-    text-align: center; 
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .devise {
+    position: relative;
     display: inline-block;
-    color: white;
-    padding: 20px 40px;
-    font-size: clamp(20px, 5vw, 50px);
-    border: 2px solid;
-    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%);
-    border-radius: 30px;
+    width: 100%;
+    color: #ffffff;
+    padding: 25px 40px;
+    font-size: clamp(20px, 5vw, 65px);
+    font-weight: bold;
+    line-height: 1.2;
 }
+
+.devise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1112AA 50%, #DA001A 50%);
+    opacity: 80%;  
+    z-index: -1;  
+}
+
+.badgone_sous-titre{
+    font-family:"Segoe UI",Arial,sans-serif;
+    color: #ffffff;
+    position: absolute;
+
+    font-size: 30px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 110px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
 
 
 @media (max-width: 768px) { 
@@ -56,12 +102,12 @@ h2 {
     position: fixed;
     top: 0;
     transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding: 55px 0;
+    padding: 30px 0;
 }
 
 .boutons_pages.scrolled {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
+    background: rgba(0, 0, 0, 1);
+    padding: 30px 0;
 }
 
 a{
@@ -350,80 +396,33 @@ footer svg{
 }
 
 
-.last_match {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #383636;
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    margin: 50px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.match_total {
-    display: flex;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.championship_day {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 20px;  
-}
-
-.last_match img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-}
-
-.score {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.winner {
-    color: green;
-    font-weight: bold;
-}
-
-.looser {
-    color: red;
-    font-weight: bold;
-}
-
-.last_match .score-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 
-
-
-.fond{
+.fond {
     display: flex;
     flex-direction: column;
-    background: url("image/fond.webp") no-repeat center fixed; 
+    background: url("image/fond.webp") no-repeat center;
     background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center;
     height: 100vh;
-    filter: blur(3px);
+    filter: brightness(60%);
+
+}
+
+@media (max-width: 768px) {
+    .fond {
+        background-attachment: scroll;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+.copyrights{
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -434,74 +433,67 @@ footer svg{
 
 
 
-
-
-/* --------------------------------------------------------------------------------------------------------*/ */
-/* ----------------------------------- MENU DEFILANT ------------------------------------------------------------*/ */
-/* --------------------------------------------------------------------------------------------------------*/
-
-.mySlides {
-    display: none;
-} 
-.card {
-    width: 100%;
+.bandeau {
+    background-color: black;
+    color: white;
     padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     text-align: center;
 }
 
-.w3-animate-right {
-    position:relative;
-    animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}
+.bandeau-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.w3-content {
-    margin-left:auto;
-    margin-right:auto
+.bandeau-column {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
 }
 
-.w3-display-container {
-    position:relative 
+.bandeau-title {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.w3-button {
-    border:none;
-    display:inline-block;
-    padding:8px 16px;
-    vertical-align:middle;
-    overflow:hidden;
-    text-decoration:none;
-    color:inherit;
-    background-color:inherit;
-    text-align:center;
-    cursor:pointer;
-    white-space:nowrap
+.bandeau-list {
+    list-style: none;
+    padding: 0;
 }
 
-.w3-green {
-    color:#fff!important;
-    background-color:#4CAF50!important 
+.bandeau-item {
+    margin: 5px 0;
+    font-size: 10px;
 }
 
-.w3-black {
-    color:#fff!important;
-    background-color:#000!important 
+.bandeau-link {
+    color: white;
+    text-decoration: none;
 }
 
-.w3-display-left {
-    position:absolute;
-    top:50%;
-    left:0%;
-    transform:translate(0%,-50%);
-    -ms-transform:translate(-0%,-50%)
+.bandeau-link:hover {
+    text-decoration: underline;
 }
 
-.w3-display-right { 
-    position:absolute;
-    top:50%;
-    right:0%;
-    transform:translate(0%,-50%);
-    -ms-transform:translate(0%,-50%)
+.img_bandeau{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 13px;
+}
+
+.trait{
+    border-bottom: #ffffff;
+    border-right: #ffffff;
+    border-left: #ffffff;
+    border-top: #ffffff;
+    margin-bottom: 2px;
+}
+
+.back{
+    font-size: 100px;
+    color:  rgb(250, 250, 16)
 }
