@@ -499,13 +499,17 @@ footer svg{
 
 .resume {
     display: flex;
-    border: #000000;
+    border: 2px solid #000; /* Bordure visible */
     text-align: justify;
-    border-style: solid;
-    font-size: 30px;
-    border-radius: 1px;
-    padding: 10px;
+    font-size: clamp(16px, 2vw, 20px); /* Taille responsive */
     border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 80%; /* Limite la largeur */
+    width: 100%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+    line-height: 1.6; /* Espacement du texte pour lisibilité */
 }
 
 .total_resume{
@@ -524,7 +528,24 @@ footer svg{
     flex-direction:row; 
 }
 
-.titre_descriptif{
-    font-family:"Segoe UI",Arial,sans-serif;
+.img_lion {
+    max-width: 550px; /* Taille max */
+    width: 100%;
+    height: auto; /* Garde les proportions */
+}
 
+@media screen and (max-width: 768px) {
+    .descriptif {
+        flex-direction: column; /* Passe en colonne sur mobile */
+        text-align: center;
+    }
+
+    .resume {
+        font-size: clamp(14px, 3vw, 24px); /* Adapte la taille du texte */
+        max-width: 90%;
+    }
+
+    .img_lion {
+        max-width: 150px; /* Réduit la taille du lion */
+    }
 }
